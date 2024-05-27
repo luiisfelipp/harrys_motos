@@ -1,0 +1,262 @@
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5rem;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    flex-flow: row nowrap;
+    background-color: black;
+    
+}
+
+
+.penege{
+    height: 70px;
+}
+
+.menu__title{
+    color: white;
+}
+
+.menu__list{
+    display: flex;
+    gap: 2rem;
+    color: var(--highlight-color);
+    justify-content: space-around;
+
+}
+.menu__header{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.menu__list__item{
+    color: whitesmoke;
+}
+
+body {
+    box-sizing: border-box;
+    background-color: var(--cor-de-fundo) ;
+    font-family: 'Raleway';
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    
+}
+
+
+ol, ul,li {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: var(--cor-de-link);
+}
+
+.container-stock {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-top: 10%;
+}
+
+.product:hover{
+    border-color: blue;
+    font-size: 17px;
+
+}
+
+.product {
+    width: 300px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.product img {
+    max-width: 90%;
+}
+
+.product img:hover{
+    width: 100%;
+}
+
+.formulario {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    padding-top: 80px;
+}
+
+.formulario legend{
+    border: 1px solid black;
+}
+
+
+.solicita{
+    border: 1px black;
+}
+
+
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    padding: 10px 10px;
+    margin: 0 0 10px;
+}
+
+.input-padron{
+
+    margin: 0 0 20px;
+    padding: 10px 10px;
+    width: 50%;
+}
+
+.enviar{
+    width: 40%;
+    padding: 10px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: darkblue;
+    border: none;
+    border-radius: 5px;
+    transition: 3s all;
+    cursor:pointer;
+}
+
+.ventas{
+    padding-top: 100px;
+}
+
+.contenedor-ventas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 200px;
+  }
+  
+  .venta {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .venta img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .venta h2 {
+    margin-top: 10px;
+  }
+  
+  .venta p {
+    margin-top: 5px;
+  }
+  
+  .venta span {
+    font-weight: bold;
+  }
+
+.Copyright{
+    color: white;
+    margin: 20px;
+}
+
+footer{
+    text-align: center;
+    background: url(imagenes/bg.jpg);
+    padding: 40px;
+}
+
+/* .container-user h2{
+    display: flex;
+    justify-content: center;
+}
+
+.user-list {
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    font-size: 23px;
+}
+
+.user-list table th{
+    border: 1px solid #ccc;
+}
+.user-list table td{
+    border: 1px solid #ccc;
+} */
+
+.container-user {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
+}
+
+.container-user h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.user-list {
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+form {
+    text-align: center;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}

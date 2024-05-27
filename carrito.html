@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="style-carrito.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="d1">
+    <header>
+        <div class="caja">
+            <h1><img class= "logo" src="imotos/logo-header-black.jpg"></h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="productos.html">Productos</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="carrito.html"> <img class="carrito" src="imotos/anadir-al-carrito.png"> </a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="container">
+                <div class="product">
+                    <img src="imotos/r7_azul-750x519.jpg" alt="Moto 1">
+                        <h2>Yamaha R7</h2>
+                        <p>$10.490.000</p>
+                        <button class="menos">-</button>
+                        <label for="cantidad">1</label>
+                        <button class="mas">+</button>
+                        <button>Agregar al carrito</button>
+                        <p>Máximo 10 unidades</p>
+                </div>
+                <div class="product">
+                    <img src="imotos/R3A-2022-2-2.jpg" alt="Moto 2">
+                        <h2>Yamaha R3</h2>
+                        <p>$5.990.000</p>
+                        <button class="menos">-</button>
+                        <label for="cantidad">1</label>
+                        <button class="mas">+</button>
+                        <button>Agregar al carrito</button>
+                        <p>Máximo 10 unidades</p>
+                </div>
+                <div class="product">
+                    <img src="imotos/r1_negra.jpg" alt="Moto 3">
+                    <h2>Yamaha R1</h2>
+                    <p>$22.490.000</p>
+                    <button class="menos">-</button>
+                    <label for="cantidad">1</label>
+                    <button class="mas">+</button>
+                    <button>Agregar al carrito</button>
+                    <p>Máximo 10 unidades</p>
+                <!-- Agrega más productos aquí -->
+            </div>
+        </div>
+            <div class="cart">
+                <h2>Carrito</h2>
+                <ul class="cart-items">
+                    <!-- Los elementos del carrito se agregarán aquí dinámicamente -->
+                </ul>
+                <div class="total">
+                    <p>Productos: 3</p>
+                    <p>Descuentos: $0</p>
+                    <span>Total: </span>
+                    <span class="cart-total">$38.970.000</span>
+                </div>
+                <button class="checkout-btn">Pagar</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
