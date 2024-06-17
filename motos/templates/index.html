@@ -2,33 +2,35 @@
 
 <html lang="es">
     {% load static %}
+
 <head>
     <meta charset="UTF-8">
     <title>Harry's Motos Home</title>
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{% static 'reset.css'%}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link
             href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
             rel="stylesheet">
 </head>
+
 <body>
         <header>
             <div class="caja">
-                <h1><img class= "logo" src="../imotos/logo-header-black.jpg"></h1>
+                <h1><img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}"></h1>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="productos.html">Productos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="carrito.html"> <img class="carrito" src="../imotos/anadir-al-carrito.png"> </a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="/motos/carrito"> <img class="carrito" src="{%static 'imotos/anadir-al-carrito.png' %}"> </a></li>
                     </ul>
                 </nav>
             </div>
         </header>
-    <img class="banner"src="imotos/banner_R3A-4.jpg">
+    <img class="banner"src="{% static '/imotos/Banner_R3A-4.jpg' %}">
 
 
     <main>
@@ -36,9 +38,9 @@
 
             <h2 class="titulo-principal">Sobre Harry's Motos</h2>
 
-            <img class="drhouse" src="imotos/drhouse.webp" alt="Utensilios de un barbero"
+            <img class="drhouse" src="{%static 'imotos/drhouse.webp'%}" alt="Utensilios de un barbero">
             
-            <p>¿Eres amante de la velocidad? Aquí en Harry's Motos tenemos lo que buscas. </p>
+            <p> ¿Eres amante de la velocidad? Aquí en Harry's Motos tenemos lo que buscas. </p>
     
             <p id="mision"><em>Nuestra misión es: <strong>"Proporcionar experiencias únicas e inigualables".</p></em></strong>
     
@@ -72,7 +74,7 @@
 
     
     <footer>
-        <img class= "logo" src="imotos/logo-header-black.jpg">
+        <img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}">
         <p class="Copyright">&copy Copyright Harry's Motos 2024</p>
         <a href="admin.html">Administrador</a>
     </footer>

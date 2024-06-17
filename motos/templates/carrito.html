@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="style-carrito.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{%static 'style-carrito.css' %}">
+    <link rel="stylesheet" href="{%static 'style.css' %}">
 </head>
 <body class="d1">
     <header>
         <div class="caja">
-            <h1><img class= "logo" src="imotos/logo-header-black.jpg"></h1>
+            <h1><img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}"></h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="carrito.html"> <img class="carrito" src="imotos/anadir-al-carrito.png"> </a></li>
+                    <li><a href="/motos/index">Home</a></li>
+                    <li><a href="/motos/productos">Productos</a></li>
+                    <li><a href="/motos/contacto">Contacto</a></li>
+                    <li><a href="/motos/carrito"> <img class="carrito" src="{%static 'imotos/anadir-al-carrito.png' %}"> </a></li>
                 </ul>
             </nav>
         </div>
@@ -25,7 +26,7 @@
         <div class="container">
             <div class="container">
                 <div class="product">
-                    <img src="imotos/r7_azul-750x519.jpg" alt="Moto 1">
+                    <img src="{% static 'imotos/r7_azul-750x519.jpg' %}" alt="Moto 1">
                         <h2>Yamaha R7</h2>
                         <p>$10.490.000</p>
                         <button class="menos">-</button>
@@ -35,7 +36,7 @@
                         <p>Máximo 10 unidades</p>
                 </div>
                 <div class="product">
-                    <img src="imotos/R3A-2022-2-2.jpg" alt="Moto 2">
+                    <img src="{% static 'imotos/R3A-2022-2-2.jpg' %}" alt="Moto 2">
                         <h2>Yamaha R3</h2>
                         <p>$5.990.000</p>
                         <button class="menos">-</button>
@@ -45,7 +46,7 @@
                         <p>Máximo 10 unidades</p>
                 </div>
                 <div class="product">
-                    <img src="imotos/r1_negra.jpg" alt="Moto 3">
+                    <img src="{% static 'imotos/r1_negra.jpg' %}" alt="Moto 3">
                     <h2>Yamaha R1</h2>
                     <p>$22.490.000</p>
                     <button class="menos">-</button>
