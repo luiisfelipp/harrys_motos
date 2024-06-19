@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Referencia de la hoja de estilo de Css -->
-    <link rel="stylesheet" href="style-admin.css">
+    <link rel="stylesheet" href="{% static 'style-admin.css'%}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fonte del Proyecto Raleway -->
@@ -17,7 +18,7 @@
     <div class="tudo">
     <section class="menu">
         <header class="menu__header">
-            <a href="index.html"> <img class="penege" src="imotos/admin.png"> </a>
+            <a href="/motos/index"> <img class="penege" src="{% static 'imotos/admin.png' %}"> </a>
             
             <h3 class="menu__title">Administrador</h3>
         </header>
@@ -33,19 +34,19 @@
     </section>
     <section class="container-stock" id="stock">
         <div class="product">
-            <img src="imotos/r7_azul-750x519.jpg" alt="Moto 1">
+            <img src="{% static 'imotos/r7_azul-750x519.jpg' %}" alt="Moto 1">
             <h2>Yamaha R7</h2>
             <p>Stock: 20 unidades</p>
             <a href="#Agregar"><button class="solicitar">Solicitar unidades</button></a>
         </div>
         <div class="product">
-            <img src="imotos/R3A-2022-2-2.jpg" alt="Moto 2">
+            <img src="{% static 'imotos/R3A-2022-2-2.jpg' %}" alt="Moto 2">
             <h2>Yamaha R3</h2>
             <p>Stock: 10 unidades</p>
             <a href="#Agregar"><button class="solicitar">Solicitar unidades</button></a>
         </div>
         <div class="product">
-            <img src="imotos/r1_negra.jpg" alt="Moto 3">
+            <img src="{% static 'imotos/r1_negra.jpg' %}" alt="Moto 3">
             <h2>Yamaha R1</h2>
             <p>Stock: 4 unidades</p>
             <a href="#Agregar"><button class="solicitar">Solicitar unidades</button></a>
@@ -91,17 +92,17 @@
     <section class="ventas" id="ventas">
         <div class="contenedor-ventas">
             <div class="venta">
-              <img src="imotos/R3A-2022-2-2.jpg" alt="Yamaha R3">
+              <img src="{% static 'imotos/R3A-2022-2-2.jpg' %}" alt="Yamaha R3">
               <h2>Yamaha R3</h2>
               <p>Ventas en los últimos 30 días:  21 unidades</p>
             </div>
             <div class="venta">
-              <img src="imotos/r7_azul-750x519.jpg" alt="Yamaha R7">
+              <img src="{% static 'imotos/r7_azul-750x519.jpg' %}" alt="Yamaha R7">
               <h2>Yamaha R7</h2>
               <p>Ventas en los últimos 30 días: 17 unidades</p>
             </div>
             <div class="venta">
-              <img src="imotos/r1_negra.jpg" alt="Yamaha R1">
+              <img src="{% static 'imotos/r1_negra.jpg' %}" alt="Yamaha R1">
               <h2>Yamaha R1</h2>
               <p>Ventas en los últimos 30 días: 9 unidades</p>
             </div>
@@ -161,6 +162,6 @@
 
 
     <footer>
-        <img class= "logo" src="imotos/logo-header-black.jpg">
+        <img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}">
         <p class="Copyright">&copy Copyright Harry's Motos 2024</p>
     </footer>

@@ -9,3 +9,12 @@ def index(request):
 
 def carrito(request):
     return render(request, 'carrito.html')
+
+def productos(request):
+    return render(request, 'productos.html')
+
+def contacto(request):
+    return render(request, 'contacto.html')
+
+def admin(request):
+    return render(request, 'admin.html')
