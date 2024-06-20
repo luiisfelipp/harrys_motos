@@ -9,14 +9,24 @@
     <!-- Bootstrap -->
     <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Styles -->
-    <link href="{% static 'css/estilos.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{%static 'style-tienda.css' %}">
     
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 align-self-center"><h1 class="display-1">TIENDA</h1></div>
+    <header>
+        <div class="caja">
+            <h1><img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}"></h1>
+            <nav>
+                <ul>
+                    <li><a href="/motos/index">Home</a></li>
+                    <li><a href="/motos/productos">Productos</a></li>
+                    <li><a href="/motos/contacto">Contacto</a></li>
+                    <li><a href="/motos/carrito"> <img class="carrito" src="{%static 'imotos/anadir-al-carrito.png' %}"> </a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
+    <div class="container">
         <div class="row">
             <div class="col-8">
                 <div class="row" style="padding: 10px 0;">
@@ -24,13 +34,14 @@
                         <div class="row">
                             {% for producto in productos %}
                             <div class="col-6">
-                                <div class="card" style="height: 10rem; width: 23rem; margin: 5px 0px;">
+                                <div class="card" style="height: 20rem; width: 23rem; margin: 5px 0px;">
                                     <div class="card-body">
-                                        <h5 class="card-title">{{producto.nombre}}</h5>
-                                        <p class="card-text">{{producto.categoria}}</p>
+                                        <h5 class="card-title">{{producto.modelo}}</h5>
+                                        <img src="{% static 'imotos/' %}{{ producto.imagen }}" class="r7" alt="{{ producto.modelo }}">
+                                        <p class="card-text">{{producto.cilindrada}}</p>
                                         <p class="card-text">{{producto.precio}}</p>
                                         <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
-                                    </div>
+                                    </div> 
                                 </div>
                             </div>
                             {% endfor %}
@@ -46,5 +57,10 @@
 
     <!-- Bootstrap -->
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <footer>
+        <img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}">
+        <p class="Copyright">&copy Copyright Harry's Motos 2024</p>
+        <a href="/motos/admin">Administrador</a>
+    </footer>
 </body>
 </html>
