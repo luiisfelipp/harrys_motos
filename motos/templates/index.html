@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="es">
-    {% load static %}
+    
 
     {% load static %}
 <head>
@@ -61,18 +61,11 @@
                 </div>
     
         </section>
+        
 
         
 
     </main>
-
-    
-    <footer>
-        <img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}">
-        <p class="Copyright">&copy Copyright Harry's Motos 2024</p>
-        <a href="/motos/admin">Administrador</a>
-    </footer>
-
-
+    {% include 'footer.html' %}
 </body>
 </html>

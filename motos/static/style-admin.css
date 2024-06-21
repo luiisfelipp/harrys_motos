@@ -175,28 +175,13 @@ form label, form legend{
 
 footer{
     text-align: center;
-    background: url(imagenes/bg.jpg);
+    background: url(/static/imotos/bg.jpg);
     padding: 40px;
 }
 
-/* .container-user h2{
-    display: flex;
-    justify-content: center;
+.logo{
+    width: 220px;
 }
-
-.user-list {
-    display: flex;
-    justify-content: center;
-    align-content: space-around;
-    font-size: 23px;
-}
-
-.user-list table th{
-    border: 1px solid #ccc;
-}
-.user-list table td{
-    border: 1px solid #ccc;
-} */
 
 .container-user {
     max-width: 600px;
@@ -260,3 +245,4 @@ form button {
 form button:hover {
     background-color: #0056b3;
 }
+

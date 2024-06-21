@@ -13,6 +13,7 @@
     
 </head>
 <body>
+    
     <header>
         <div class="caja">
             <h1><img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}"></h1>
@@ -26,6 +27,8 @@
             </nav>
         </div>
     </header>
+    
+
     <div class="container">
         <div class="row">
             <div class="col-8">
@@ -40,7 +43,7 @@
                                         <img src="{% static 'imotos/' %}{{ producto.imagen }}" class="r7" alt="{{ producto.modelo }}">
                                         <p class="card-text">{{producto.cilindrada}}</p>
                                         <p class="card-text">{{producto.precio}}</p>
-                                        <a href="{% url 'Add' producto.id %}" class="btn btn-primary">Agregar al carrito</a>
+                                        <a href="{% url 'Add' producto.id %}" class="btn btn-primary" id="kkk" data-producto-id="{{ producto.id }}"> Agregar al carrito</a>
                                     </div> 
                                 </div>
                             </div>
@@ -53,14 +56,24 @@
                 {% include "carrito.html" %}
             </div>
         </div>
-    </div>
+    </div> 
+    <section class="modal1" >
+        <div class="modal__container">
+            <img src="{% static 'imotos/check.png' %}" class="modal__img">
+            <h2 class="modal__title">¡Producto agregado al carrito!</h2>
+            <a href="#" class="modal__close">Close</a>
+        </div>
+    </section>
 
+    
+
+
+   
+    
+    <script src="{% static 'js/main.js' %}"></script>
     <!-- Bootstrap -->
     <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <footer>
-        <img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}">
-        <p class="Copyright">&copy Copyright Harry's Motos 2024</p>
-        <a href="/motos/admin">Administrador</a>
-    </footer>
+
+    {% include 'footer.html' %}
 </body>
 </html>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Referencia de la hoja de estilo de Css -->
-    <link rel="stylesheet" href="{% static 'style-admin.css'%}">
+    <link rel="stylesheet" href="{% static 'style-admin.css' %}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- Fonte del Proyecto Raleway -->
@@ -158,10 +158,6 @@
         </div>
     </section>
 
-
-
-
-    <footer>
-        <img class= "logo" src="{% static 'imotos/logo-header-black.jpg' %}">
-        <p class="Copyright">&copy Copyright Harry's Motos 2024</p>
-    </footer>
+    {% include 'footer.html' %}
+</body>
+</html>
