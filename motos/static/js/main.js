@@ -1,11 +1,12 @@
-const openModal = document.querySelector('.btn-primary');
-const modal = document.querySelector('.modal1');
+const openModal = document.querySelector('.btn-success');
+const modal = document.getElementById('mod1');
 const closeModal = document.querySelector('.modal__close');
 
 openModal.addEventListener('click', (e)=>{
     e.preventDefault();
     modal.classList.add('modal--show');
 });
+
 
 closeModal.addEventListener('click', (e)=>{
     e.preventDefault();

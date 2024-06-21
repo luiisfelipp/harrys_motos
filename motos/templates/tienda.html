@@ -42,8 +42,8 @@
                                         <h5 class="card-title">{{producto.modelo}}</h5>
                                         <img src="{% static 'imotos/' %}{{ producto.imagen }}" class="r7" alt="{{ producto.modelo }}">
                                         <p class="card-text">{{producto.cilindrada}}</p>
-                                        <p class="card-text">{{producto.precio}}</p>
-                                        <a href="{% url 'Add' producto.id %}" class="btn btn-primary" id="kkk" data-producto-id="{{ producto.id }}"> Agregar al carrito</a>
+                                        <p class="card-text">$ {{producto.precio}}</p>
+                                        <a href="{% url 'Add' producto.id %}" class="btn btn-primary"> Agregar al carrito</a>
                                     </div> 
                                 </div>
                             </div>
@@ -57,18 +57,13 @@
             </div>
         </div>
     </div> 
-    <section class="modal1" >
+    <section class="modal1" id="mod1">
         <div class="modal__container">
             <img src="{% static 'imotos/check.png' %}" class="modal__img">
-            <h2 class="modal__title">¡Producto agregado al carrito!</h2>
-            <a href="#" class="modal__close">Close</a>
+            <h2 class="modal__title">¡Felicidades por tu elección! Serás redirigido al portal de pago.</h2>
+            <a href="#" class="modal__close">Cerrar</a>
         </div>
-    </section>
-
-    
-
-
-   
+    </section>   
     
     <script src="{% static 'js/main.js' %}"></script>
     <!-- Bootstrap -->
