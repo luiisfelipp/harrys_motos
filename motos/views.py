@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from motos.carrito import Carrito
 from motos.models import *
 
+
 def hello(request):
     return HttpResponse("wema xixetu")
 
@@ -65,3 +66,11 @@ def eliminarUsuario(request, usuario):
 
     return redirect('/admini#user')
 
+# Carrusel
+
+def HomeView(request):
+    carousel = Carousel.objects.all()
+    context  = {
+        'carousel' : carousel
+    }
+    return render(request, "index.html", context)

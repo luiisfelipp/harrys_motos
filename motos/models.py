@@ -22,3 +22,6 @@ class Usuarios(models.Model):
     
     def maskedpassword(self):
         return("*****")
+    
+class Carousel(models.Model):
+    image       = models.ImageField()

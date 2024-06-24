@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
+    <title>Home</title>
     <link rel="stylesheet" href="{%static 'style.css' %}">
 </head>
 <body class="d1">
@@ -24,8 +24,7 @@
             </nav>
         </div>
     </header>
-    <img class="banner"src="{% static '/imotos/Banner_R3A-4.jpg' %}">
-
+    {% include 'carrusel.html' %}
 
     <main>
         <section class="principal">
@@ -67,5 +66,6 @@
 
     </main>
     {% include 'footer.html' %}
+
 </body>
 </html>
