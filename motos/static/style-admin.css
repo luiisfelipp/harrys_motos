@@ -184,8 +184,8 @@ footer{
 }
 
 .container-user {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 700px;
+    margin: auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
@@ -246,3 +246,28 @@ form button:hover {
     background-color: #0056b3;
 }
 
+.editar{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #0A7BBF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.eliminar{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #F92D01;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 # Create your models here.
 class Producto(models.Model):
@@ -19,3 +20,5 @@ class Usuarios(models.Model):
     def __str__(self):
         return f'{self.usuario} -> {self.email}'
     
+    def maskedpassword(self):
+        return("*****")

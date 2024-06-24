@@ -18,7 +18,7 @@
     <div class="tudo">
     <section class="menu">
         <header class="menu__header">
-            <a href="/motos/index"> <img class="penege" src="{% static 'imotos/admin.png' %}"> </a>
+            <a href="/index"> <img class="penege" src="{% static 'imotos/admin.png' %}"> </a>
             
             <h3 class="menu__title">Administrador</h3>
         </header>
@@ -123,19 +123,15 @@
                         </tr>
                     </thead>
                     <tbody>
+                        {% for u in usuarios %}
                         <tr>
-                            <td>semefrizan</td>
-                            <td>Elver Pérez</td>
-                            <td>elvergalarga@harrys.com</td>
-                            <td>********</td>
+                            <td>{{u.usuario}}</td>
+                            <td>{{u.nombre}}</td>
+                            <td>{{u.email}}</td>
+                            <td>{{u.maskedpassword}}</td>
+                            <td><a href="eliminarUsuario/{{u.usuario}}" class="eliminar">Eliminar</a></td>
                         </tr>
-                        <tr>
-                            <td>rozita</td>
-                            <td>Rosa Rodríguez</td>
-                            <td>rosamelfierro@harrys.com</td>
-                            <td>********</td>
-                        </tr>
-                        <!-- Agrega más usuarios aquí -->
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
@@ -143,7 +139,7 @@
     
         <div class="container-user">
             <h2>Editar Usuario</h2>
-            <form>
+            <form action="/registrarUsuario/" method="POST">{% csrf_token %}
                 <label for="username">Usuario:</label>
                 <input type="text" id="username" name="username" placeholder="Harrys">
                 <label for="name">Nombre:</label>
@@ -152,8 +148,7 @@
                 <input type="email" id="email" name="email" value="" placeholder="ejemplo@harrys.cl">
                 <label for="password">Contraseña:</label>
                 <input type="password" id="password" name="password" placeholder="********">
-                <button type="submit">Crear/Modificar</button>
-                <button type="button">Eliminar</button>
+                <button type="submit">Crear</button>
             </form>
         </div>
     </section>

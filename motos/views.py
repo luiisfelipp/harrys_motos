@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from motos.carrito import Carrito
-from motos.models import Producto
+from motos.models import *
 
 def hello(request):
     return HttpResponse("wema xixetu")
@@ -46,4 +46,22 @@ def contacto(request):
     return render(request, 'contacto.html')
 
 def admin(request):
-    return render(request, 'admin.html')
+    usuariosListado = Usuarios.objects.all()
+    return render(request, 'admin.html', {"usuarios": usuariosListado})
+
+def registrarUsuario(request):
+    usuario=request.POST['username']
+    nombre=request.POST['name']
+    email=request.POST['email']
+    password=request.POST['password']
+
+    usuarios = Usuarios.objects.create(
+        usuario=usuario, nombre=nombre, email=email, password=password)
+    return redirect('/admini#user')
+
+def eliminarUsuario(request, usuario):
+    user = Usuarios.objects.get(usuario=usuario)
+    user.delete()
+
+    return redirect('/admini#user')
+
